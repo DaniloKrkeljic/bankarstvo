@@ -10,6 +10,7 @@ while($red = mysqli_fetch_assoc($query)){
     <td><?php echo $red['prezime'];?></td>
     <td><?php echo $red['adresa'];?></td>
     <td><a href="dodavanje_korisnika.php?jmbg=<?php echo $red['jmbg'];?>">Izmjena korisnika</a></td>
-    <td><a href="brisanje_korisnika.php?jmbg=<?php echo $red['jmbg'];?>" id="brisanje">Ukloni korisnika</a></td>
+    <td><a href="brisanje_korisnika.php?jmbg=<?php echo $red['jmbg'];?>" class="brisanje">Ukloni korisnika</a></td>
+    <td><a href="pregled_racuna.php?jmbg=<?php echo $red['jmbg'];?>">Pregled racuna</a></td>
   </tr>
 <?php }?>

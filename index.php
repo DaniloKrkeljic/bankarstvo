@@ -19,9 +19,11 @@
   <h3><a href="dodavanje_korisnika.php">Dodaj korisnika</a></h3>
 
   <script type="text/javascript">
-    document.getElementById('brisanje').addEventListener('click',(e) => {
-      confirm("Da li ste sigurni da zelite da uklonite korisnika?")?alert('Korisnik obrisan')
-        :e.preventDefault();
-    });
+    let brisanje = document.getElementsByClassName('brisanje');
+    for (let i=0;i<brisanje.length;i++){
+      brisanje[i].addEventListener("click",(e) => {
+        confirm("Da li ste sigurni da zelite da uklonite korisnika?")?alert("Korisnik obrisan."):e.preventDefault();
+      });
+    }
   </script>
 </body>
