@@ -27,12 +27,16 @@
       <form action="dodavanje_korisnika_db.php" method="POST">
         <label for="ime">Ime: </label>
         <input type="text" name="ime" id="ime" value="<?php echo $red['ime'];?>">
+        <br>
         <label for="prezime">Prezime: </label>
         <input type="text" name="prezime" id="prezime" value="<?php echo $red['prezime'];?>">
+        <br>
         <label for="jmbg">JMBG: </label>
         <input type="text" name="jmbg" id="jmbg" value="<?php echo $red['jmbg'];?>">
+        <br>
         <label for="adresa">Adresa: </label>
         <input type="text" name="adresa" id="adresa" value="<?php echo $red['adresa'];?>">
+        <br>
         <input type="submit" value="Izmijeni">
       </form>
     <?php } else {
