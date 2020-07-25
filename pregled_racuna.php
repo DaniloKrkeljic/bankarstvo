@@ -19,6 +19,7 @@ while($rezultat = mysqli_fetch_assoc($query)){
     <td><?php echo $rezultat['id'];?></td>
     <td id="stanje"><?php echo $rezultat['stanje'];?></td>
     <td><a href="izmjena_stanja.php?jmbg=<?php echo $jmbg;?>&&racunId=<?php echo $rezultat['id'];?>" id="izmjena_stanja">Izmjena stanja</a></td>
+    <td><a href="ukloni_racun.php?jmbg=<?php echo $jmbg;?>&&racunId=<?php echo $rezultat['id'];?>" class ="brisanje">Ukloni racun</a></td>
   </tr>
 <?php } ?>
 </table>
@@ -27,3 +28,14 @@ while($rezultat = mysqli_fetch_assoc($query)){
   <input type="hidden" name="jmbg" value="<?php echo $jmbg;?>">
   <input type="submit" value="Dodaj racun">
 </form>
+<br>
+<h3><a href="index.php">Pocetna</a><h3>
+
+<script type="text/javascript">
+  let brisanje = document.getElementsByClassName('brisanje');
+  for (let i=0;i<brisanje.length;i++){
+    brisanje[i].addEventListener('click',(e) => {
+      confirm("Da li ste sigurni da zelite da obrisete racun?")?alert("Racun obrisan."):e.preventDefault();
+    });
+  }
+</script>
